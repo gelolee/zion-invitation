@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'PlayFairItalic';
   font-weight: 800;
-  src: url('/fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2');
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'PlayFairItalic1';
-  src: url('/fonts/PlayfairDisplay/PlayfairDisplay-MediumItalic.woff2') format('woff2');
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-MediumItalic.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Cairo-regular';
   font-weight: 100;
-  src: url('/fonts/Cairo/Cairo-Regular.woff2') format('woff2');
+  src: url('../fonts/Cairo/Cairo-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
