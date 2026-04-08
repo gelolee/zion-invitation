@@ -6,8 +6,10 @@
     <title>Christening Invitation</title>
     <!-- JS -->
     <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsvie.css" />
     <link
@@ -30,11 +32,19 @@
   </head>
 
   <body>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <div class="container py-5">
       <!-- HERO -->
-      <div class="glass hero fade-in">
+      <div
+        class="glass hero"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="2000"
+      >
         <p>You are invited to the Christening of</p>
         <h1>Baby Zion Asher</h1>
         <p class="line-design">June 14, 2026</p>
@@ -52,14 +62,19 @@
       </div>
 
       <!-- DETAILS -->
-      <div class="details-section section fade-in">
+      <div class="details-section section">
         <div class="text-center">
-          <h2 class="section-title title-line d-inline-block position-relative">
+          <h2
+            class="section-title title-line d-inline-block position-relative"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000"
+          >
             Event Details
           </h2>
         </div>
         <div class="row g-4">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Ceremony</h3>
@@ -122,7 +137,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Reception</h3>
