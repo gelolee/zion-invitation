@@ -32,9 +32,6 @@
   </head>
 
   <body>
-    <script>
-      AOS.init();
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <div class="container py-5">
@@ -68,13 +65,18 @@
             class="section-title title-line d-inline-block position-relative"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             Event Details
           </h2>
         </div>
         <div class="row g-4">
-          <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+          <div
+            class="col-md-6 position-relative"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1300"
+          >
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Ceremony</h3>
@@ -137,7 +139,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+          <div
+            class="col-md-6 position-relative"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1300"
+          >
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Reception</h3>
@@ -204,7 +211,13 @@
       </div>
 
       <!-- MAP -->
-      <div class="glass section text-center mt-4 fade-in">
+      <div
+        class="glass section text-center mt-4"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+        data-aos-delay="1300"
+      >
         <h2 class="section-title">Location</h2>
         <div style="height: 400px" id="map">
           <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -256,7 +269,13 @@
       </div>
 
       <!-- NINONGS -->
-      <div class="godparents glass section text-center mt-4 fade-in">
+      <div
+        class="godparents glass section text-center mt-4"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+        data-aos-delay="1300"
+      >
         <h2 class="section-title">Ninongs & Ninangs</h2>
         <div class="row">
           <div class="col-6 col-md-3"><p>Reylan</p></div>
@@ -304,5 +323,8 @@
         <p>Thank you for celebrating with us 💙</p>
       </div>
     </div>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
