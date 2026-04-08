@@ -6,9 +6,18 @@
     <title>Christening Invitation</title>
     <!-- JS -->
     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsvie.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -21,6 +30,8 @@
   </head>
 
   <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <div class="container py-5">
       <!-- HERO -->
       <div class="glass hero fade-in">
@@ -70,7 +81,7 @@
                       d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
                     />
                   </svg>
-                  <p class="m-0 ms-1">Sta. Cruz Church</p>
+                  <p class="m-0 ms-1">Holy Cross Parish Church</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-center">
                   <svg
@@ -133,7 +144,7 @@
                       d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
                     />
                   </svg>
-                  <p class="m-0 ms-1">L'Familia</p>
+                  <p class="m-0 ms-1">L'Familia Resort</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-center">
                   <svg
@@ -179,35 +190,84 @@
 
       <!-- MAP -->
       <div class="glass section text-center mt-4 fade-in">
-        <h4 class="section-title">Location</h4>
-        <div style="height: 250px; background: #ddd; border-radius: 15px"></div>
+        <h2 class="section-title">Location</h2>
+        <div style="height: 400px" id="map">
+          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+          <script>
+            // Initialize the map
+            var map = L.map("map").setView([14.916, 120.544], 14);
+            // Add OpenStreetMap tiles
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+              maxZoom: 19,
+            }).addTo(map);
+            // Custom icon with image and text
+            function createCustomIcon(text, imgUrl) {
+              return L.divIcon({
+                className: "custom-div-icon",
+                html: `<img src="${imgUrl}" style="width:50px;height:50px;"><div class="pin-text">${text}</div>`,
+                iconSize: [50, 70], // image height + text
+                iconAnchor: [25, 50], // anchor at bottom center of image
+              });
+            }
+            // Markers with your local image + text
+            L.marker([14.91184, 120.56421], {
+              icon: createCustomIcon(
+                "Santa Cruz, Lubao Pampanga",
+                "img/Church.jpg",
+              ),
+            })
+              .addTo(map)
+              .on("click", function () {
+                window.open(
+                  "https://www.google.com/maps/dir/?api=1&destination=14.91184,120.56421",
+                  "_blank",
+                );
+              });
+            L.marker([14.92508, 120.5299], {
+              icon: createCustomIcon(
+                "L’Familia Marangle Resort",
+                "img/reception.png",
+              ),
+            })
+              .addTo(map)
+              .on("click", function () {
+                window.open(
+                  "https://www.google.com/maps/dir/?api=1&destination=14.92508,120.5299",
+                  "_blank",
+                );
+              });
+          </script>
+        </div>
       </div>
 
       <!-- NINONGS -->
-      <div class="glass section text-center mt-4 fade-in">
-        <h4 class="section-title">Ninongs & Ninangs</h4>
+      <div class="godparents glass section text-center mt-4 fade-in">
+        <h2 class="section-title">Ninongs & Ninangs</h2>
         <div class="row">
-          <div class="col-6 col-md-3">Reylan</div>
-          <div class="col-6 col-md-3">Rose</div>
+          <div class="col-6 col-md-3"><p>Reylan</p></div>
+          <div class="col-6 col-md-3"><p>Rose</p></div>
+          <div class="col-6 col-md-3"><p>Christian</p></div>
+          <div class="col-6 col-md-3"><p>Mica</p></div>
+          <div class="col-6 col-md-3"><p>Kyle</p></div>
+          <div class="col-6 col-md-3"><p>Paula</p></div>
+          <div class="col-6 col-md-3"><p>Kian</p></div>
+          <div class="col-6 col-md-3"><p>Ira</p></div>
+          <div class="col-6 col-md-3"><p>Carle</p></div>
+          <div class="col-6 col-md-3"><p>Faye</p></div>
+          <div class="col-6 col-md-3"><p>Renz</p></div>
+          <div class="col-6 col-md-3"><p>Graciella</p></div>
+          <div class="col-6 col-md-3"><p>Ian</p></div>
+          <div class="col-6 col-md-3"><p>Shaina</p></div>
         </div>
       </div>
 
       <!-- GALLERY -->
-      <div class="section fade-in">
-        <h4 class="text-center section-title">Gallery</h4>
-        <div class="row g-3 gallery">
-          <div class="col-6 col-md-3">
-            <img src="img/image1.jpg" class="img-fluid" />
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="img/image1.jpg" class="img-fluid" />
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="img/image1.jpg" class="img-fluid" />
-          </div>
-          <div class="col-6 col-md-3">
-            <img src="img/image1.jpg" class="img-fluid" />
-          </div>
+      <div class="section fade-in text-center">
+        <h2 class="section-title">Gallery</h2>
+        <div class="owl-carousel owl-theme">
+          <div class="item"><img src="img/image1.jpg" /></div>
+          <div class="item"><img src="img/image1.jpg" /></div>
+          <div class="item"><img src="img/image1.jpg" /></div>
         </div>
       </div>
 
