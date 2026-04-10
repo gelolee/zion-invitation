@@ -20,7 +20,8 @@
 
 h2 { font-family: 'PlayFairItalic1'; }
 p, h3{ font-family: 'Cairo-regular'; }
-body { font-family: 'Cairo-regular'; background: url('../img/desktop-bg.png'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center center; }
+body { font-family: 'Cairo-regular'; }
+.bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('../img/desktop-bg.png'); z-index: -1; }
 #map { height: 480px; width: 100%; }
 #map .pin-text { width: max-content; background: rgba(42, 129, 203, 0.9); padding: 2px; font-size: .6rem; font-family: 'Cairo-regular'; }
 
@@ -29,8 +30,13 @@ body { font-family: 'Cairo-regular'; background: url('../img/desktop-bg.png'); b
 .details-section .glass-1 { border-bottom-left-radius:20px ; border-bottom-right-radius:20px ; }
 
 /* GLASS CARD */
-.glass-1 { background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
-.glass { background: rgba(255, 255, 255, 0.25); border-radius: 20px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+.glass-1 { position: relative; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);}
+/* .glass { background: rgba(255, 255, 255, 0.25); border-radius: 20px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.5); } */
+.glass { position: relative; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); will-change: transform; border-radius: 20px;}
+.content-hero { z-index: 3; }
+.liquidGlass-effect { position: absolute; z-index: 0; inset: 0; backdrop-filter: blur(3px); filter: url(#glass-distortion); overflow: hidden; isolation: isolate; }
+.liquidGlass-tint { z-index: 1; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.15); }
+.liquidGlass-shine { position: absolute; inset: 0; z-index: 2; overflow: hidden; box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5); }
 .glass .line-design{ position: relative; display: inline-block; font-size: 1.5rem; color: #2c3e50; text-align: center; padding: 0 1rem; }
 .glass .line-design::before, .glass .line-design::after { content: ""; position: absolute; top: 50%; width: 80px; height: 2px; background-color: #2c3e50; }
 .glass .line-design::before { left: -75px; background: linear-gradient(to right, transparent, #2c3e50);}
