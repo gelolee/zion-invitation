@@ -20,7 +20,7 @@
 
 h2 { font-family: 'PlayFairItalic1'; }
 p, h3{ font-family: 'Cairo-regular'; }
-body { font-family: 'Cairo-regular'; }
+body { font-family: 'Cairo-regular'; background: red; }
 .bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); background-image: url(../img/desktop-bg.png); z-index: -1; }
 #map { height: 480px; width: 100%; }
 #map .pin-text { width: max-content; background: rgba(42, 129, 203, 0.9); padding: 2px; font-size: .6rem; font-family: 'Cairo-regular'; }
