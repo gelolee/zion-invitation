@@ -10,7 +10,13 @@
     <!-- JS -->
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsvie.css" />
     <link
@@ -88,7 +94,9 @@
     <div class="container py-5">
       <div class="bg-fixed"></div>
       <!-- HERO -->
-      <div class="glass hero">
+      <div
+        class="glass hero animate__animated animate__fadeIn animate__slow animate__delay-1s"
+      >
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -97,7 +105,9 @@
           <h1>Baby Zion Asher</h1>
           <p class="line-design">June 14, 2026</p>
           <div class="d-flex flex-column align-items-center">
-            <button class="btn-glass mt-3">View Details</button>
+            <button class="btn-glass mt-3" id="viewDetails">
+              View Details
+            </button>
             <div class="baby-img"></div>
           </div>
           <div class="about-desc text-center mt-4 fade-in">
@@ -111,15 +121,28 @@
       </div>
 
       <!-- DETAILS -->
-      <div class="details-section section">
-        <div class="text-center">
-          <h2 class="section-title title-line d-inline-block position-relative">
+      <div class="details-section section" id="next">
+        <div
+          class="text-center animate__animated animate__fadeInUp animate__slow"
+        >
+          <h2
+            class="section-title title-line d-inline-block position-relative"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top"
+            data-aos-duration="2300"
+          >
             Event Details
           </h2>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
-            <div class="card-effect d-flex flex-column">
+            <div
+              class="card-effect d-flex flex-column"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top"
+              data-aos-duration="2300"
+              data-aos-delay="1000"
+            >
               <div class="event-title p-2 text-center">
                 <h3>Ceremony</h3>
               </div>
@@ -187,7 +210,13 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card-effect d-flex flex-column">
+            <div
+              class="card-effect d-flex flex-column"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top"
+              data-aos-duration="2300"
+              data-aos-delay="2000"
+            >
               <div class="event-title p-2 text-center">
                 <h3>Reception</h3>
               </div>
@@ -258,7 +287,13 @@
       </div>
 
       <!-- MAP -->
-      <div class="glass section text-center mt-4">
+      <div
+        class="glass section text-center mt-4"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top"
+        data-aos-duration="2300"
+        data-aos-delay="2000"
+      >
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -318,7 +353,13 @@
       </div>
 
       <!-- NINONGS -->
-      <div class="godparents glass section text-center mt-4">
+      <div
+        class="godparents glass section text-center mt-4"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top"
+        data-aos-duration="2300"
+        data-aos-delay="800"
+      >
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -345,8 +386,22 @@
 
       <!-- GALLERY -->
       <div class="section gallery fade-in text-center">
-        <h2 class="section-title">Gallery</h2>
-        <div class="owl-carousel owl-theme">
+        <h2
+          class="section-title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top"
+          data-aos-duration="2300"
+          data-aos-delay="1000"
+        >
+          Gallery
+        </h2>
+        <div
+          class="owl-carousel owl-theme"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top"
+          data-aos-duration="2300"
+          data-aos-delay="1400"
+        >
           <div class="item"><img src="img/image1.jpg" /></div>
           <div class="item"><img src="img/caro2.jpg" /></div>
           <div class="item"><img src="img/caro3.jpg" /></div>
@@ -380,4 +435,7 @@
       </div>
     </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>

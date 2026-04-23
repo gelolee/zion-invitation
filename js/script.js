@@ -1,20 +1,49 @@
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
     loop: true,
-    margin: 20,
+    margin: 10,
     nav: false,
     dots: true,
-    center: true, // Center the active item
+    center: true,
     autoplay: true,
-    autoplayTimeout: 3500,
-    autoplayHoverPause: true,
-    smartSpeed: 800,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: false,
+    smartSpeed: 1500,
     responsive: {
       0: { items: 1.5 },
       600: { items: 3 },
       1000: { items: 4 },
     },
   });
+  // target section
+  var target = document.querySelector(".section.fade-in");
+  // observer
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          owl.trigger("play.owl.autoplay", [4000]); // resume autoplay
+        } else {
+          owl.trigger("stop.owl.autoplay"); // stop autoplay
+        }
+      });
+    },
+    {
+      threshold: 0.5, // 50% visible before triggering
+    },
+  );
+  observer.observe(target);
+});
+
+$("#viewDetails").on("click", function (e) {
+  e.preventDefault();
+  $("html, body").animate(
+    {
+      scrollTop: $("#next").offset().top,
+    },
+    1000, // speed in ms
+  );
 });
 
 // const faders = document.querySelectorAll(".fade-in");
