@@ -20,8 +20,8 @@
 
 h2 { font-family: 'PlayFairItalic1'; }
 p, h3{ font-family: 'Cairo-regular'; }
-body { font-family: 'Cairo-regular'; background: red; }
-.bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); background-image: url(../img/desktop-bg.png); z-index: -1; }
+body { font-family: 'Cairo-regular'; margin: 0; padding: 0; }
+.bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100%; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); background-image: url(../img/desktop-bg.png); z-index: 0; inset: 0; background-position: 50% 70%; background-repeat: no-repeat; background-size: cover; }
 #map { height: 480px; width: 100%; }
 #map .pin-text { width: max-content; background: rgba(42, 129, 203, 0.9); padding: 2px; font-size: .6rem; font-family: 'Cairo-regular'; }
 
@@ -71,15 +71,14 @@ body { font-family: 'Cairo-regular'; background: red; }
 .card-effect { transition: .3s; }
 
 /* GALLERY */
-.gallery img { border-radius: 15px; transition: 0.3s;}
-.gallery img:hover { transform: scale(1.05); }
+.gallery img { border-radius: 15px; transition: 0.3s; aspect-ratio:19/30; object-fit: cover;}
+.gallery .owl-carousel .owl-stage-outer { border-radius: 15px; }
 
 /* COUNTDOWN */
 .countdown { display: flex; justify-content: space-around; text-align: center; }
 .count-box { padding: 15px; border-radius: 15px; width: 80px; }
 
-/* ANIMATION */
-/* .fade-in { opacity: 0; transform: translateY(30px); transition: 1s ease; }
-.fade-in.show { opacity: 1; transform: translateY(0); } */
-
 .godparents p { font-size: 1rem; font-weight: 600; }
+
+.owl-theme .owl-dots .owl-dot span { background: #4A4947!important; width: 15px!important; height: 15px!important; }
+.owl-theme .owl-dots .owl-dot.active span { background: #B17457!important; }

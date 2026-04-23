@@ -2,7 +2,7 @@ $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    nav: true,
+    nav: false,
     dots: true,
     center: true, // Center the active item
     autoplay: true,
@@ -10,9 +10,9 @@ $(document).ready(function () {
     autoplayHoverPause: true,
     smartSpeed: 800,
     responsive: {
-      0: { items: 1 },
+      0: { items: 1.5 },
       600: { items: 3 },
-      1000: { items: 5 },
+      1000: { items: 4 },
     },
   });
 });

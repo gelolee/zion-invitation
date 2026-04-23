@@ -7,10 +7,10 @@
 .godparents .section-title::after { right: -70px; background: linear-gradient(to left, transparent, #2c3e50); }
 }
 @media (max-width: 426px) {
-.section-title::before, .section-title::after { width: 110px; }
-.section-title::before { left: -100px; background: linear-gradient(to right, transparent, #2c3e50);}
-.section-title::after { right: -100px; background: linear-gradient(to left, transparent, #2c3e50); }
-.bg-fixed { background-position: unset; }
+.section-title::before, .section-title::after { width: 90px; }
+.section-title::before { left: -85px; background: linear-gradient(to right, transparent, #2c3e50);}
+.section-title::after { right: -85px; background: linear-gradient(to left, transparent, #2c3e50); }
+.bg-fixed { background-size: cover; background-position: left; }
 }
 @media (max-width: 400px) {
 .godparents .section-title::before, .godparents .section-title::after { width: 55px; }
