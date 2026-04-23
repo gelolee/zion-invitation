@@ -58,7 +58,7 @@ body { font-family: 'Cairo-regular'; }
 .btn-glass:hover { background: #4a6fa5; transform: translateY(-2px); }
 
 /* BABY IMAGE */
-.baby-img { width: 200px; height: 200px; margin-top: 20px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.6); object-fit: cover; }
+.baby-img { background-size: cover; background-repeat: no-repeat; background-position: 75%; background-image: url('../img/zion.jpg'); width: 200px; height: 200px; margin-top: 20px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.6); object-fit: cover; }
 
 /* SECTION */
 .section { padding: 60px 20px; }

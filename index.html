@@ -6,10 +6,8 @@
     <title>Christening Invitation</title>
     <!-- JS -->
     <script src="js/script.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsvie.css" />
     <link
@@ -87,12 +85,7 @@
     <div class="container py-5">
       <div class="bg-fixed"></div>
       <!-- HERO -->
-      <div
-        class="glass hero"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="2000"
-      >
+      <div class="glass hero">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -102,7 +95,7 @@
           <p class="line-design">June 14, 2026</p>
           <div class="d-flex flex-column align-items-center">
             <button class="btn-glass mt-3">View Details</button>
-            <img src="img/image1.jpg" class="baby-img" />
+            <div class="baby-img"></div>
           </div>
           <div class="about-desc text-center mt-4 fade-in">
             <p>
@@ -117,22 +110,12 @@
       <!-- DETAILS -->
       <div class="details-section section">
         <div class="text-center">
-          <h2
-            class="section-title title-line d-inline-block position-relative"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-duration="1500"
-          >
+          <h2 class="section-title title-line d-inline-block position-relative">
             Event Details
           </h2>
         </div>
         <div class="row g-4">
-          <div
-            class="col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="1300"
-          >
+          <div class="col-md-6">
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Ceremony</h3>
@@ -200,12 +183,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-md-6"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="1300"
-          >
+          <div class="col-md-6">
             <div class="card-effect d-flex flex-column">
               <div class="event-title p-2 text-center">
                 <h3>Reception</h3>
@@ -277,13 +255,7 @@
       </div>
 
       <!-- MAP -->
-      <div
-        class="glass section text-center mt-4"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="1000"
-        data-aos-delay="1300"
-      >
+      <div class="glass section text-center mt-4">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -343,13 +315,7 @@
       </div>
 
       <!-- NINONGS -->
-      <div
-        class="godparents glass section text-center mt-4"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="1000"
-        data-aos-delay="1300"
-      >
+      <div class="godparents glass section text-center mt-4">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
@@ -409,8 +375,5 @@
         <p>Thank you for celebrating with us 💙</p>
       </div>
     </div>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
