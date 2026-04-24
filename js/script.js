@@ -79,3 +79,16 @@ var group = L.featureGroup(markers);
 map.fitBounds(group.getBounds(), {
   padding: window.innerWidth <= 768 ? [20, 20] : [50, 50],
 });
+
+$(document).ready(function () {
+  $(".envelope").click(function () {
+    $(this).addClass("open");
+
+    // fade out after animation
+    setTimeout(() => {
+      $("#envelope-screen").fadeOut(800);
+    }, 1200);
+  });
+});
+
+$("#main-content").addClass("show");

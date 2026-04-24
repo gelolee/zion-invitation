@@ -17,3 +17,21 @@
 .godparents .section-title::before { left: -50px; background: linear-gradient(to right, transparent, #2c3e50);}
 .godparents .section-title::after { right: -50px; background: linear-gradient(to left, transparent, #2c3e50); }
 }
+
+
+
+@media (min-width: 768px){
+    .envelope{ width: 1000px; height: 350px;}
+    .letter { top: 45px; padding-top: 115px; }
+    .letter h2 { font-size: 3rem; }
+    .letter p { font-size: 1rem; }
+    .seal { left: calc(52% - 28px); bottom: 200px;}
+}
+
+@media (min-width: 992px){
+    .envelope { height: 450px; }
+    .letter { top: 65px; padding-top: 140px; }
+    .letter h2 { font-size: 3rem; }
+    .letter p { font-size: 1rem; }
+    .seal { left: calc(52% - 34px); bottom: 260px;}
+}
