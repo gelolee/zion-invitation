@@ -8,10 +8,14 @@
     />
     <title>Christening Invitation</title>
     <!-- JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flipdown/dist/flipdown.css"
+    />
+    <script src="https://unpkg.com/flipdown/dist/flipdown.js"></script>
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsvie.css" />
     <link
@@ -90,7 +94,9 @@
     <!-- Enveloper -->
     <div id="envelope-screen">
       <div class="container d-flex justify-content-center envelope-wrapper">
-        <div class="envelope">
+        <div
+          class="envelope animate__animated animate__fadeIn animate__slow animate__delay-1s"
+        >
           <div class="flap"></div>
           <div class="letter">
             <h2>Zion's Special Day</h2>
@@ -307,7 +313,7 @@
               L.marker([14.91184, 120.56421], {
                 icon: createCustomIcon(
                   "Santa Cruz, Lubao Pampanga",
-                  "img/Church.jpg",
+                  "assets/img/Church.jpg",
                 ),
               })
                 .addTo(map)
@@ -320,7 +326,7 @@
               L.marker([14.92508, 120.5299], {
                 icon: createCustomIcon(
                   "L’Familia Marangle Resort",
-                  "img/reception.png",
+                  "assets/img/reception.png",
                 ),
               })
                 .addTo(map)
@@ -365,29 +371,31 @@
       <div class="section gallery fade-in text-center">
         <h2 class="section-title">Gallery</h2>
         <div class="owl-carousel owl-theme">
-          <div class="item"><img src="img/image1.jpg" /></div>
-          <div class="item"><img src="img/caro2.jpg" /></div>
-          <div class="item"><img src="img/caro3.jpg" /></div>
-          <div class="item"><img src="img/caro4.jpg" /></div>
+          <div class="item"><img src="assets/img/zion1.jpg" /></div>
+          <div class="item"><img src="assets/img/zion2.jpg" /></div>
+          <div class="item"><img src="assets/img/zion3.jpg" /></div>
+          <div class="item"><img src="assets/img/zion4.jpg" /></div>
+          <div class="item"><img src="assets/img/zion5.jpg" /></div>
+          <div class="item"><img src="assets/img/zion6.jpg" /></div>
+          <div class="item"><img src="assets/img/zion7.jpg" /></div>
+          <div class="item"><img src="assets/img/zion8.jpg" /></div>
+          <div class="item"><img src="assets/img/zion9.jpg" /></div>
+          <div class="item"><img src="assets/img/image1.jpg" /></div>
+          <div class="item"><img src="assets/img/caro2.jpg" /></div>
+          <div class="item"><img src="assets/img/caro3.jpg" /></div>
+          <div class="item"><img src="assets/img/caro4.jpg" /></div>
         </div>
       </div>
 
       <!-- COUNTDOWN -->
-      <div class="glass section text-center mt-4 fade-in">
+      <div class="glass section text-center mt-4">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
         <div class="liquidGlass-shine"></div>
-        <div class="content-hero">
-          <div class="countdown">
-            <div class="glass count-box">
-              <span id="days">0</span><br />Days
-            </div>
-            <div class="glass count-box">
-              <span id="hours">0</span><br />Hours
-            </div>
-            <div class="glass count-box">
-              <span id="minutes">0</span><br />Min
-            </div>
+        <div class="content-hero d-flex justify-content-center">
+          <div class="count-down">
+            <h2>Countdown Timer</h2>
+            <div class="flipdown" id="flipdown"></div>
           </div>
         </div>
       </div>

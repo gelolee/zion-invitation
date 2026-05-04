@@ -17,6 +17,12 @@
 .godparents .section-title::before { left: -50px; background: linear-gradient(to right, transparent, #2c3e50);}
 .godparents .section-title::after { right: -50px; background: linear-gradient(to left, transparent, #2c3e50); }
 }
+@media (max-width: 374px) {
+.flipdown .rotor-group:nth-child(4) { display: none; }
+.flipdown .rotor-group:nth-child(3)::after,   .flipdown .rotor-group:nth-child(3)::before { display: none; }
+.flipdown { width: 230px; }
+.flipdown .rotor-group:nth-child(3) { padding: 0; }
+}
 
 
 
