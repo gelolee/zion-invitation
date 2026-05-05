@@ -1,0 +1,20 @@
+{
+  "name": "zion-invitation",
+  "version": "1.0.0",
+  "description": "Zion Asher's Christening Invitation",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Development server not configured'",
+    "build": "echo 'Build complete'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "invitation",
+    "christening"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0"
+  }
+}
