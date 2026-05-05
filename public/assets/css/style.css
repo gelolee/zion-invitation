@@ -21,7 +21,7 @@
 h2 { font-family: 'PlayFairItalic1'; }
 p, h3{ font-family: 'Cairo-regular'; }
 body { font-family: 'Cairo-regular'; margin: 0; padding: 0; }
-.bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100%; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); background-image: url(../assets/img2/desktop-bg.webp); z-index: 0; inset: 0; background-position: 50% 70%; background-repeat: no-repeat; background-size: cover;  }
+.bg-fixed { position: fixed; top: 0; left: 0; width: 100%; height: 100%; padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); background-image: url(../../assets/img2/desktop-bg.webp); z-index: 0; inset: 0; background-position: 50% 70%; background-repeat: no-repeat; background-size: cover;  }
 #map { height: 480px; width: 100%; }
 #map .pin-text { width: max-content; background: rgba(42, 129, 203, 0.9); padding: 2px; font-size: .6rem; font-family: 'Cairo-regular'; }
 
@@ -56,7 +56,7 @@ body { font-family: 'Cairo-regular'; margin: 0; padding: 0; }
 .btn-glass:hover { background: #4a6fa5; transform: translateY(-2px); }
 
 /* BABY IMAGE */
-.baby-img { background-size: cover; background-repeat: no-repeat; background-position: 75%; background-image: url('../assets/img2/zion.webp'); width: 200px; height: 200px; margin-top: 20px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.6); object-fit: cover; }
+.baby-img { background-size: cover; background-repeat: no-repeat; background-position: 75%; background-image: url('../../assets/img2/zion.webp'); width: 200px; height: 200px; margin-top: 20px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.6); object-fit: cover; }
 
 /* SECTION */
 .section { padding: 60px 20px; }
@@ -84,7 +84,7 @@ body { font-family: 'Cairo-regular'; margin: 0; padding: 0; }
 .envelope-wrapper {text-align: center; width: max-content;}
 .envelope { position: relative; width: 1000px; height: 300px; background: #d4b49991; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer; overflow: hidden; }
 .flap { position: absolute; width: 100%; height: 100%; background: #D4B499; clip-path: polygon(0 0, 100% 0, 50% 40%); transform-origin: top; transition: transform 0.6s ease; z-index: 3; }
-.letter { position: absolute; width: 90%; height: 80%; background: url('../assets/img2/desktop-bg.webp'); background-position: center;  background-size: cover; background-repeat: no-repeat; top: 40px; left: 5%; border-radius: 4px; text-align: center; padding-top: 110px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.8s ease; z-index: 1; }
+.letter { position: absolute; width: 90%; height: 80%; background: url('../../assets/img2/desktop-bg.webp'); background-position: center;  background-size: cover; background-repeat: no-repeat; top: 40px; left: 5%; border-radius: 4px; text-align: center; padding-top: 110px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.8s ease; z-index: 1; }
 .letter h2 { margin: 0; font-size: 2rem; color: #8b6f47; }
 .letter p { font-size: 1rem; color: #999; }
 .seal { position: absolute; width: 30px; height: 30px; background: #889EAF; border-radius: 50%; bottom: 170px; left: calc(53% - 27px); z-index: 4; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
