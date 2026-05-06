@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return L.divIcon({
       className: "custom-div-icon",
       html: `<div class="icon-wrap" style="display: flex; flex-direction: column; align-items: center;">
-               <img src="${imgUrl}" style="width:50px;height:50px;border-radius:50%;border:2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+               <img src="${imgUrl}" alt="image" style="width:50px;height:50px;border-radius:50%;border:2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
                <div class="pin-text" style="background:white;padding:2px 5px;border-radius:5px;font-size:10px;margin-top:2px; font-weight: bold; white-space: nowrap;">${text}</div>
              </div>`,
       iconSize: [60, 70], // Matches the size of your wrapping div
