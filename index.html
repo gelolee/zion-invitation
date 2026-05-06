@@ -17,37 +17,23 @@
     />
     <meta
       property="og:image"
-      content="https://zion-invitation-green.vercel.app/assets/img/thumbnail.jpg"
+      content="[https://zion-invitation-green.vercel.app/assets/img/thumbnail.jpg](https://zion-invitation-green.vercel.app/assets/img/thumbnail.jpg)"
     />
     <meta
       property="og:url"
-      content="https://zion-invitation-green.vercel.app/"
+      content="[https://zion-invitation-green.vercel.app/](https://zion-invitation-green.vercel.app/)"
     />
     <meta property="og:type" content="website" />
     <title>Christening Invitation</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.ico" />
-    <!-- JS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flipdown/dist/flipdown.css"
-    />
-    <script src="https://unpkg.com/flipdown/dist/flipdown.js"></script>
-    <script src="/assets/js/script.js" defer></script>
-    <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- CSS -->
+    <!-- CSS Priority: Frameworks first, then custom styles -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsvie.css" />
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/assets/css/leaflet.css" />
   </head>
 
   <body>
@@ -101,15 +87,10 @@
         />
       </filter>
     </svg>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Enveloper -->
+    <!-- Envelope Overlay -->
     <div id="envelope-screen">
       <div class="container d-flex justify-content-center envelope-wrapper">
-        <div
-          class="envelope animate__animated animate__fadeIn animate__slow animate__delay-1s"
-        >
+        <div class="envelope">
           <div class="flap"></div>
           <div class="letter">
             <h2>Zion's Special Day</h2>
@@ -119,7 +100,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Main Content -->
     <div class="container py-5" id="main-content">
       <div class="bg-fixed"></div>
       <!-- HERO -->
@@ -300,56 +281,7 @@
         <div class="liquidGlass-shine"></div>
         <div class="content-hero">
           <h2 class="section-title">Location</h2>
-          <div style="height: 400px" id="map">
-            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-            <script>
-              // Initialize the map
-              var map = L.map("map").setView([14.916, 120.544], 14);
-              // Add OpenStreetMap tiles
-              L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-                  maxZoom: 19,
-                },
-              ).addTo(map);
-              // Custom icon with image and text
-              function createCustomIcon(text, imgUrl) {
-                return L.divIcon({
-                  className: "custom-div-icon",
-                  html: `<img src="${imgUrl}" style="width:50px;height:50px;"><div class="pin-text">${text}</div>`,
-                  iconSize: [50, 70], // image height + text
-                  iconAnchor: [25, 50], // anchor at bottom center of image
-                });
-              }
-              // Markers with your local image + text
-              L.marker([14.91184, 120.56421], {
-                icon: createCustomIcon(
-                  "Santa Cruz, Lubao Pampanga",
-                  "/assets/img2/Church.webp",
-                ),
-              })
-                .addTo(map)
-                .on("click", function () {
-                  window.open(
-                    "https://www.google.com/maps/dir/?api=1&destination=14.91184,120.56421",
-                    "_blank",
-                  );
-                });
-              L.marker([14.92508, 120.5299], {
-                icon: createCustomIcon(
-                  "L’Familia Marangle Resort",
-                  "/assets/img2/reception.webp",
-                ),
-              })
-                .addTo(map)
-                .on("click", function () {
-                  window.open(
-                    "https://www.google.com/maps/dir/?api=1&destination=14.92508,120.5299",
-                    "_blank",
-                  );
-                });
-            </script>
-          </div>
+          <div style="height: 400px" id="map"></div>
         </div>
       </div>
 
@@ -418,4 +350,11 @@
       </div>
     </div>
   </body>
+  <!-- Scripts: Loaded at end to prevent blocking -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/assets/js/owl.carousel.min.js" defer></script>
+  <script src="/assets/js/leaflet.js" defer></script>
+  <script src="https://unpkg.com/flipdown/dist/flipdown.js" defer></script>
 </html>
