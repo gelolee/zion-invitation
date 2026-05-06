@@ -20,7 +20,7 @@
 @media (max-width: 374px) {
 .flipdown .rotor-group:nth-child(4) { display: none; }
 .flipdown .rotor-group:nth-child(3)::after,   .flipdown .rotor-group:nth-child(3)::before { display: none; }
-.flipdown { width: 230px; }
+.flipdown { width: 230px!important; }
 .flipdown .rotor-group:nth-child(3) { padding: 0; }
 }
 
