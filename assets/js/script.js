@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 3. Add Church Marker
   var churchMarker = L.marker(churchCoords, {
-    icon: createCustomIcon("Church", "/assets/img2/church.webp"),
+    icon: createCustomIcon("Church", "/assets/img2/Church.webp"),
   })
     .addTo(map)
     .on("click", function () {
