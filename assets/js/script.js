@@ -128,3 +128,9 @@ $(document).ready(function () {
     $("#flipdown").html("<h2>Event Started 🎉</h2>");
   });
 });
+
+window.va =
+  window.va ||
+  function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
