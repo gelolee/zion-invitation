@@ -17,6 +17,7 @@
   src: url('../fonts/Cairo/Cairo-Regular.woff2') format('woff2');
   font-display: swap;
 }
+html { scroll-behavior: smooth; }
 
 h2 { font-family: 'PlayFairItalic1'; }
 p, h3{ font-family: 'Cairo-regular'; }
