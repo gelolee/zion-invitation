@@ -1,0 +1,14 @@
+{
+  "name": "zion-invitation",
+  "version": "1.0.0",
+  "description": "Christening invitation website for Baby Zion Asher",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static HTML site - no build required'",
+    "lint": "echo 'No linting configured'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  }
+}
